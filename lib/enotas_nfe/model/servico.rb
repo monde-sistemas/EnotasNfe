@@ -8,6 +8,7 @@ module EnotasNfe
       attribute :aliquotaIss, Float
       attribute :issRetidoFonte, Boolean
       attribute :cnae, String
+      attribute :codigoNBS, String
       attribute :codigoServicoMunicipio, String
       attribute :descricaoServicoMunicipio, String
       attribute :itemListaServicoLC116, String
