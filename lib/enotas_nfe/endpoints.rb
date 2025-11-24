@@ -10,7 +10,7 @@ module EnotasNfe
     def get_empresa(firm_id)
       get("empresas/#{firm_id}")
     end
-    
+
     def get_empresa_by_cnpj(cnpj)
       get("empresas?pageNumber=0&pageSize=1&searchBy=CNPJ&searchTerm=#{cnpj}")
     end
@@ -110,6 +110,5 @@ module EnotasNfe
     def nfse_get_xml_by_external_id(firm_id, external_id)
       get("empresas/#{firm_id}/nfes/porIdExterno/#{external_id}/xml")
     end
-
   end
 end

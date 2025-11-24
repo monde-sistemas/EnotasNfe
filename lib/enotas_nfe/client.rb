@@ -5,19 +5,27 @@ module EnotasNfe
     include Facades
     include Endpoints
 
-    NFSE_ENDPOINT = "https://api.enotasgw.com.br/v1"
-    NFE_ENDPOINT = "https://api.enotasgw.com.br/v2"
+    PRODUCTION_NFSE_ENDPOINT = "https://api.enotasgw.com.br/v1"
+    PRODUCTION_NFE_ENDPOINT = "https://api.enotasgw.com.br/v2"
+    SANDBOX_ENDPOINT = "https://sandbox.notagateway.com.br/v1"
 
     attr_accessor :auth_token, :endpoint
 
     def initialize(auth_token, endpoint)
       @auth_token = auth_token
-      if endpoint == 'nfe'
-        @endpoint = NFE_ENDPOINT
-      else
-        @endpoint = NFSE_ENDPOINT      
-      end
+      @endpoint = determine_endpoint(endpoint)
     end
 
+    private
+
+    def determine_endpoint(endpoint_type)
+      return SANDBOX_ENDPOINT if test_environment?
+
+      endpoint_type == 'nfe' ? PRODUCTION_NFE_ENDPOINT : PRODUCTION_NFSE_ENDPOINT
+    end
+
+    def test_environment?
+      defined?(Rails) && (Rails.env.test? || Rails.env.development?)
+    end
   end
 end
