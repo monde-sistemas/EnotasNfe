@@ -13,7 +13,7 @@ module EnotasNfe
       attribute :usaCodigoServicoMunicipal, Boolean
       attribute :usaDescricaoServico, Boolean
       attribute :usaCNAE, Boolean
-      attribute :usaCodigoNBS, Boolean
+      attribute :usaNBS, Boolean
       attribute :usaItemListaServico, Boolean
       attribute :helpInscricaoMunicipal, String
       attribute :helpRegimeEspecialTributacao, String

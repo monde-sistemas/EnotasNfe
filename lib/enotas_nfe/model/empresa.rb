@@ -32,7 +32,6 @@ module EnotasNfe
       attribute :codigoServicoMunicipal, String
       attribute :itemListaServicoLC116, String
       attribute :cnae, String
-      attribute :codigoNBS, String
       attribute :aedf, String
       attribute :aliquotaIss, Float
       attribute :optanteSimplesNacional, Boolean
