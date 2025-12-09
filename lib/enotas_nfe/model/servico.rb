@@ -2,6 +2,8 @@ module EnotasNfe
   module Model
     class Servico
 
+      require "enotas_nfe/model/ibs_cbs"
+
       include Virtus.model
 
       attribute :descricao, String
@@ -19,6 +21,7 @@ module EnotasNfe
       attribute :valorIr, Float
       attribute :valorPis, Float
       attribute :valorCsll, Float
+      attribute :ibsCbs, IbsCbs
 
     end
   end
