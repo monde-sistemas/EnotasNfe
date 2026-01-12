@@ -1,3 +1,3 @@
 module EnotasNfe
-  VERSION = "0.0.41"
+  VERSION = '0.0.48'
 end

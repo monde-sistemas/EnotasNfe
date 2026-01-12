@@ -5,19 +5,20 @@ module EnotasNfe
     include Facades
     include Endpoints
 
-    NFSE_ENDPOINT = "https://api.enotasgw.com.br/v1"
-    NFE_ENDPOINT = "https://api.enotasgw.com.br/v2"
+    PRODUCTION_NFSE_ENDPOINT = "https://api.enotasgw.com.br/v1"
+    PRODUCTION_NFE_ENDPOINT = "https://api.enotasgw.com.br/v2"
 
     attr_accessor :auth_token, :endpoint
 
     def initialize(auth_token, endpoint)
       @auth_token = auth_token
-      if endpoint == 'nfe'
-        @endpoint = NFE_ENDPOINT
-      else
-        @endpoint = NFSE_ENDPOINT      
-      end
+      @endpoint = determine_endpoint(endpoint)
     end
 
+    private
+
+    def determine_endpoint(endpoint_type)
+      endpoint_type == 'nfe' ? PRODUCTION_NFE_ENDPOINT : PRODUCTION_NFSE_ENDPOINT
+    end
   end
 end
