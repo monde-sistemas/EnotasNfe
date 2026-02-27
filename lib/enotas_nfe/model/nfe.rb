@@ -5,6 +5,7 @@ module EnotasNfe
       include Virtus.model
       require "enotas_nfe/model/metadados"
       require "enotas_nfe/model/dados_adicionais_email"
+      require "enotas_nfe/model/percentual_aproximado_tributos"
 
       attribute :id, String
       attribute :numero, Integer
@@ -38,6 +39,7 @@ module EnotasNfe
       attribute :observacoes, String
       attribute :metadados, Metadados
       attribute :dadosAdicionaisEmail, DadosAdicionaisEmail
+      attribute :percentualAproximadoTributos, PercentualAproximadoTributos
     end
   end
 end
