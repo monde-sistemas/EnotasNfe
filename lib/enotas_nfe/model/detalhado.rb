@@ -1,6 +1,6 @@
 module EnotasNfe
   module Model
-    class DetalhadoTributos
+    class Detalhado
 
       include Virtus.model
 

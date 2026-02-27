@@ -3,9 +3,9 @@ module EnotasNfe
     class PercentualAproximadoTributos
 
       include Virtus.model
-      require "enotas_nfe/model/detalhado_tributos"
+      require "enotas_nfe/model/detalhado"
 
-      attribute :detalhado, DetalhadoTributos
+      attribute :detalhado, Detalhado
 
     end
   end
