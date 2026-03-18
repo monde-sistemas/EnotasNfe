@@ -41,6 +41,7 @@ module EnotasNfe
       attribute :configuracoesNFSeHomologacao, ConfiguracoesNFSeHomologacao
       attribute :configuracoesNFSeProducao, ConfiguracoesNFSeProducao
       attribute :mei, Boolean
+      attribute :emiteNFSeNacional, Boolean
       attribute :metadados, Metadados
     end
   end
