@@ -21,6 +21,7 @@ module EnotasNfe
       attribute :valorIr, Float
       attribute :valorPis, Float
       attribute :valorCsll, Float
+      attribute :tipoRetencaoPisCofins, String
       attribute :ibsCbs, IbsCbs
 
     end
