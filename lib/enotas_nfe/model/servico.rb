@@ -3,6 +3,7 @@ module EnotasNfe
     class Servico
 
       require "enotas_nfe/model/ibs_cbs"
+      require "enotas_nfe/model/pis_cofins_apuracao_propria"
 
       include Virtus.model
 
@@ -23,6 +24,7 @@ module EnotasNfe
       attribute :valorCsll, Float
       attribute :tipoRetencaoPisCofins, String
       attribute :ibsCbs, IbsCbs
+      attribute :pisCofinsApuracaoPropria, PisCofinsApuracaoPropria
 
     end
   end
