@@ -17,6 +17,7 @@ module EnotasNfe
       attribute :itemListaServicoLC116, String
       attribute :ufPrestacaoServico, String
       attribute :municipioPrestacaoServico, String
+      attribute :exportacao, Boolean
       attribute :valorCofins, Float
       attribute :valorInss, Float
       attribute :valorIr, Float
