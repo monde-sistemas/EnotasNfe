@@ -11,8 +11,7 @@ module EnotasNfe
           "Accept": "application/json",
           "User-Agent": "Enotas ruby client"
         },
-        url: endpoint,
-        ssl: {verify: false}
+        url: endpoint
       }
 
       Faraday.new(options) do |connection|
